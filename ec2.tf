@@ -1,11 +1,11 @@
 # Course AMI: RHEL 9 DevOps practice image (SSH user ec2-user).
 data "aws_ami" "joindevops" {
   most_recent = true
-  owners      = ["973714476881"]
+  owners      = ["06071c9809899e1e1"]
 
   filter {
     name   = "name"
-    values = ["Redhat-9-DevOps-Practice"]
+    values = ["Redhat-10-DevOps-Practice"]
   }
 
   filter {
