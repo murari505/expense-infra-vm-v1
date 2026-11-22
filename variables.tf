@@ -46,17 +46,13 @@ variable "monitoring_cidrs" {
 # These are the AMI's practice credentials, not secrets. Used by the readiness
 # checks and shown in the ssh_commands output.
 variable "ssh_user" {
-  description = "SSH user of the course AMI."
-  type        = string
-  default     = "ec2-user"
+  default = "ec2-user"
 }
 
-variable "ssh_password" {
-  description = "SSH password of the course AMI (practice only)."
+variable "private_key_path" {
+  description = "Path to EC2 private key"
   type        = string
-  default     = "DevOps321"
 }
-
 variable "frontend_instance_type" {
   type    = string
   default = "t3.micro"

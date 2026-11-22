@@ -18,12 +18,12 @@ resource "terraform_data" "vm_ready" {
   triggers_replace = [each.value.id]
 
   connection {
-    type     = "ssh"
-    host     = each.value.public_ip
-    user     = var.ssh_user
-    password = var.ssh_password
-    timeout  = "5m"
-  }
+  type        = "ssh"
+  host        = each.value.public_ip
+  user        = var.ssh_user
+  private_key = file(var.private_key_path)
+  timeout     = "5m"
+}
 
   # Waits on the setup log itself, not `cloud-init status --wait`: on the
   # course AMI that command can hang forever even after cloud-init is done.
