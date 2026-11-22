@@ -27,9 +27,10 @@ frontend_repo_ref = "main"
 aws_region   = "ap-southeast-2"
 app_hostname = "expense"
 
-# SSH login of the course AMI (password-based, practice only).
-ssh_user     = "ec2-user"
-ssh_password = "DevOps321"
+/* # # SSH login of the course AMI (password-based, practice only).
+# ssh_user     = "ec2-user"
+# ssh_password = "DevOps321"
+*/
 
 # Extra backend env vars, written as-is into /etc/expense/backend.env.
 backend_extra_env = {}
