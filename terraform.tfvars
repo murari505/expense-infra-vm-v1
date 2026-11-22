@@ -31,7 +31,7 @@ app_hostname = "expense"
 # ssh_user     = "ec2-user"
 # ssh_password = "DevOps321"
 */
-private_key_path = "C:/Users/YourUsername/.ssh/your-key.pem"
+private_key_path = "D:/devops-april/expense-key.pem"
 # Extra backend env vars, written as-is into /etc/expense/backend.env.
 backend_extra_env = {}
 # backend_extra_env = {
