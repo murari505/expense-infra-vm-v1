@@ -57,6 +57,7 @@ resource "aws_instance" "mysql" {
     db_password         = random_password.db_app.result
     repo_url            = var.mysql_repo_url
     repo_ref            = var.mysql_repo_ref
+    key_name = "devops-april"
   })
 
   root_block_device {
@@ -88,6 +89,7 @@ resource "aws_instance" "backend" {
     db_password  = random_password.db_app.result
     jwt_secret   = random_password.jwt_secret.result
     extra_env    = var.backend_extra_env
+    key_name = "devops-april"
   })
 
   root_block_device {
@@ -115,6 +117,7 @@ resource "aws_instance" "frontend" {
     repo_ref     = var.frontend_repo_ref
     backend_host = local.tier_hostnames.backend
     backend_port = local.backend_port
+    key_name = "devops-april"
   })
 
   root_block_device {
