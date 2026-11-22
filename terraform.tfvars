@@ -24,7 +24,7 @@ mysql_repo_ref    = "main"
 backend_repo_ref  = "main"
 frontend_repo_ref = "main"
 
-aws_region   = "ap-southeast-2"
+aws_region   = "us-east-1"
 app_hostname = "expense"
 
 # SSH login of the course AMI (password-based, practice only).
