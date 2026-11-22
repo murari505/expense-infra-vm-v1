@@ -5,7 +5,7 @@ data "aws_ami" "joindevops" {
 
   filter {
     name   = "name"
-    values = ["Redhat-10"]
+    values = ["RHEL-10*-x86_64*"]
   }
 
   filter {
