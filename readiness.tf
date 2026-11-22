@@ -53,13 +53,12 @@ resource "terraform_data" "app_ready" {
   ]
 
   connection {
-    type     = "ssh"
-    host     = aws_instance.frontend.public_ip
-    user     = var.ssh_user
-    password = var.ssh_password
-    timeout  = "5m"
-  }
-
+  type        = "ssh"
+  host        = each.value.public_ip
+  user        = var.ssh_user
+  private_key = file(var.private_key_path)
+  timeout     = "5m"
+}
   provisioner "remote-exec" {
     inline = [
       "for i in $(seq 1 60); do if curl -fsS --max-time 5 https://${local.app_fqdn}/api/health/ready; then echo; echo 'app is ready: https://${local.app_fqdn}'; exit 0; fi; echo \"attempt $i/60: not ready yet\"; sleep 5; done; echo 'app did not become healthy within 5 minutes'; exit 1",
