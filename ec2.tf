@@ -45,7 +45,6 @@ resource "random_password" "jwt_secret" {
 resource "aws_instance" "mysql" {
   ami                         = data.aws_ami.joindevops.id
   instance_type               = var.mysql_instance_type
-  key_name = "devops-april"
   subnet_id                   = aws_subnet.public["a"].id
   vpc_security_group_ids      = [aws_security_group.mysql.id]
   user_data_replace_on_change = true
@@ -64,6 +63,10 @@ resource "aws_instance" "mysql" {
   root_block_device {
     volume_type = "gp3"
     volume_size = 20
+  }
+
+  lifecycle {
+    prevent_destroy = true
   }
 
   tags        = { Name = "${var.project}-mysql", Tier = "mysql" }

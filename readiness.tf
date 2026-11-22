@@ -6,7 +6,6 @@ locals {
   instances = {
     frontend = aws_instance.frontend
     backend  = aws_instance.backend
-    mysql    = aws_instance.mysql
   }
 }
 
