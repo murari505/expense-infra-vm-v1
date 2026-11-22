@@ -1,7 +1,7 @@
 # Course AMI: RHEL 9 DevOps practice image (SSH user ec2-user).
 data "aws_ami" "joindevops" {
   most_recent = true
-  owners      = ["06071c9809899e1e1"]
+  owners      = [amazon]
 
   filter {
     name   = "name"
