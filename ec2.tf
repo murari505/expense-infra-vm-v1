@@ -45,6 +45,7 @@ resource "random_password" "jwt_secret" {
 resource "aws_instance" "mysql" {
   ami                         = data.aws_ami.joindevops.id
   instance_type               = var.mysql_instance_type
+  key_name = "devops-april"
   subnet_id                   = aws_subnet.public["a"].id
   vpc_security_group_ids      = [aws_security_group.mysql.id]
   user_data_replace_on_change = true
@@ -57,7 +58,7 @@ resource "aws_instance" "mysql" {
     db_password         = random_password.db_app.result
     repo_url            = var.mysql_repo_url
     repo_ref            = var.mysql_repo_ref
-    key_name = "devops-april"
+    
   })
 
   root_block_device {
@@ -72,6 +73,7 @@ resource "aws_instance" "mysql" {
 resource "aws_instance" "backend" {
   ami                         = data.aws_ami.joindevops.id
   instance_type               = var.backend_instance_type
+  key_name = "devops-april"
   subnet_id                   = aws_subnet.public["b"].id
   vpc_security_group_ids      = [aws_security_group.backend.id]
   user_data_replace_on_change = true
@@ -89,7 +91,7 @@ resource "aws_instance" "backend" {
     db_password  = random_password.db_app.result
     jwt_secret   = random_password.jwt_secret.result
     extra_env    = var.backend_extra_env
-    key_name = "devops-april"
+    
   })
 
   root_block_device {
@@ -106,6 +108,7 @@ resource "aws_instance" "backend" {
 resource "aws_instance" "frontend" {
   ami                         = data.aws_ami.joindevops.id
   instance_type               = var.frontend_instance_type
+  key_name = "devops-april"
   subnet_id                   = aws_subnet.public["a"].id
   vpc_security_group_ids      = [aws_security_group.frontend.id]
   user_data_replace_on_change = true
@@ -117,7 +120,7 @@ resource "aws_instance" "frontend" {
     repo_ref     = var.frontend_repo_ref
     backend_host = local.tier_hostnames.backend
     backend_port = local.backend_port
-    key_name = "devops-april"
+    
   })
 
   root_block_device {
