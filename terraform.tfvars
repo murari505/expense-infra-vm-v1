@@ -9,7 +9,7 @@ domain_name = "nirmala02.online"
 
 # Your public IP, /32. Re-check if your IP changes:
 #   curl -s https://checkip.amazonaws.com
-admin_cidr = "106.200.161.146/32"
+admin_cidr = "106.192.35.183/32"
 # Extra CIDRs that may scrape the exporter ports (admin_cidr and the VPC are
 # always allowed). E.g. a Prometheus server outside this VPC: ["198.51.100.7/32"]
 monitoring_cidrs = []
