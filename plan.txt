@@ -1,0 +1,256 @@
+random_password.mysql_root: Refreshing state... [id=none]
+random_password.db_app: Refreshing state... [id=none]
+random_password.jwt_secret: Refreshing state... [id=none]
+data.aws_availability_zones.available: Reading...
+data.aws_route53_zone.main: Reading...
+data.aws_ami.joindevops: Reading...
+aws_vpc.main: Refreshing state... [id=vpc-0ca8ec51d4f2e1e0b]
+aws_acm_certificate.app: Refreshing state... [id=arn:aws:acm:ap-southeast-2:063487530809:certificate/ed986206-f985-49c7-ade7-7a52bf280864]
+data.aws_availability_zones.available: Read complete after 2s [id=ap-southeast-2]
+data.aws_ami.joindevops: Read complete after 3s [id=ami-06071c9809899e1e1]
+data.aws_route53_zone.main: Read complete after 3s [id=Z06027811LY2NMA384H5S]
+aws_route53_record.cert_validation["expense.nirmala02.online"]: Refreshing state... [id=Z06027811LY2NMA384H5S__ca5434cfd64f40abfa44b2ac6e7358c0.expense.nirmala02.online._CNAME]
+aws_acm_certificate_validation.app: Refreshing state... [id=0001-01-01 00:00:00 +0000 UTC]
+aws_internet_gateway.main: Refreshing state... [id=igw-08ab71a4835b186e4]
+aws_subnet.public["a"]: Refreshing state... [id=subnet-0ea859d6f5fd9dc8f]
+aws_lb_target_group.frontend: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-southeast-2:063487530809:targetgroup/expense-frontend-tg/ceb2f9dc8ca6b634]
+aws_subnet.public["b"]: Refreshing state... [id=subnet-0380e88e835954953]
+aws_security_group.alb: Refreshing state... [id=sg-0b3639dfbd8324ad4]
+aws_security_group.mysql: Refreshing state... [id=sg-0757e625623134301]
+aws_security_group.frontend: Refreshing state... [id=sg-00b4eaf8141e964fb]
+aws_security_group.backend: Refreshing state... [id=sg-0211d8577c070eee5]
+aws_route_table.public: Refreshing state... [id=rtb-040222de6a4cf297e]
+aws_vpc_security_group_ingress_rule.alb_http: Refreshing state... [id=sgr-0189f34f5bb5e09a9]
+aws_vpc_security_group_ingress_rule.alb_https: Refreshing state... [id=sgr-089d38625f72f6716]
+aws_lb.main: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-southeast-2:063487530809:loadbalancer/app/expense-alb/a7e2e994e0b80e87]
+aws_vpc_security_group_ingress_rule.frontend_from_alb: Refreshing state... [id=sgr-084df4b52f5e50ee4]
+aws_instance.mysql: Refreshing state... [id=i-0b36d53fa43684cf9]
+aws_route_table_association.public["a"]: Refreshing state... [id=rtbassoc-013d9ebf534b97a21]
+aws_route_table_association.public["b"]: Refreshing state... [id=rtbassoc-0c1e7fa282a987d15]
+aws_vpc_security_group_ingress_rule.backend_from_frontend: Refreshing state... [id=sgr-07be66536bbe3ca7e]
+aws_vpc_security_group_ingress_rule.mysql_from_backend: Refreshing state... [id=sgr-099432b9694126a66]
+aws_vpc_security_group_ingress_rule.ssh["mysql"]: Refreshing state... [id=sgr-07b308d75d9049e6e]
+aws_vpc_security_group_ingress_rule.ssh["backend"]: Refreshing state... [id=sgr-0d9c156088ebe27b2]
+aws_vpc_security_group_ingress_rule.ssh["frontend"]: Refreshing state... [id=sgr-044192c8e7e76b44f]
+aws_vpc_security_group_egress_rule.all["mysql"]: Refreshing state... [id=sgr-0b2ad7646be5ade4e]
+aws_vpc_security_group_ingress_rule.monitoring["frontend-nginx_exporter-106.216.203.146/32"]: Refreshing state... [id=sgr-079cd9dbd42361a07]
+aws_vpc_security_group_ingress_rule.monitoring["backend-node_exporter-106.216.203.146/32"]: Refreshing state... [id=sgr-0adc1024c55e27874]
+aws_vpc_security_group_ingress_rule.monitoring["mysql-mysqld_exporter-10.0.0.0/16"]: Refreshing state... [id=sgr-02eacdb12dccb4c81]
+aws_vpc_security_group_ingress_rule.monitoring["mysql-node_exporter-106.216.203.146/32"]: Refreshing state... [id=sgr-0cf7675ccae00eab1]
+aws_vpc_security_group_ingress_rule.monitoring["mysql-node_exporter-10.0.0.0/16"]: Refreshing state... [id=sgr-0f836949ff717f75f]
+aws_vpc_security_group_ingress_rule.monitoring["backend-node_exporter-10.0.0.0/16"]: Refreshing state... [id=sgr-0c450bdfe5f3b5a9c]
+aws_vpc_security_group_ingress_rule.monitoring["frontend-node_exporter-106.216.203.146/32"]: Refreshing state... [id=sgr-0fa6b6f63edad07b8]
+aws_vpc_security_group_ingress_rule.monitoring["mysql-mysqld_exporter-106.216.203.146/32"]: Refreshing state... [id=sgr-094b98256ca023f12]
+aws_vpc_security_group_ingress_rule.monitoring["backend-backend_metrics-106.216.203.146/32"]: Refreshing state... [id=sgr-0f4d529912d7c5778]
+aws_vpc_security_group_ingress_rule.monitoring["frontend-node_exporter-10.0.0.0/16"]: Refreshing state... [id=sgr-0933123edbfe79769]
+aws_vpc_security_group_ingress_rule.monitoring["backend-backend_metrics-10.0.0.0/16"]: Refreshing state... [id=sgr-0777eae81ecd3073b]
+aws_vpc_security_group_ingress_rule.monitoring["frontend-nginx_exporter-10.0.0.0/16"]: Refreshing state... [id=sgr-06a0a15ec5f78c837]
+aws_vpc_security_group_egress_rule.all["alb"]: Refreshing state... [id=sgr-01eacae74755420e9]
+aws_vpc_security_group_egress_rule.all["backend"]: Refreshing state... [id=sgr-05027b63c543e00e3]
+aws_vpc_security_group_egress_rule.all["frontend"]: Refreshing state... [id=sgr-0d7a2cfe886d1a47a]
+aws_route53_record.app: Refreshing state... [id=Z06027811LY2NMA384H5S_expense.nirmala02.online_A]
+aws_lb_listener.http: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-southeast-2:063487530809:listener/app/expense-alb/a7e2e994e0b80e87/68cbf04f59a7f023]
+aws_lb_listener.https: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-southeast-2:063487530809:listener/app/expense-alb/a7e2e994e0b80e87/198d1eb0456396c1]
+aws_route53_record.mysql: Refreshing state... [id=Z06027811LY2NMA384H5S_mysql.nirmala02.online_A]
+aws_instance.backend: Refreshing state... [id=i-09935cdd0d344f943]
+aws_route53_record.backend: Refreshing state... [id=Z06027811LY2NMA384H5S_backend.nirmala02.online_A]
+aws_instance.frontend: Refreshing state... [id=i-0867f3c5db741c102]
+aws_lb_target_group_attachment.frontend: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-southeast-2:063487530809:targetgroup/expense-frontend-tg/ceb2f9dc8ca6b634-20261123144249864500000004]
+terraform_data.vm_ready["frontend"]: Refreshing state... [id=41ddb425-d40a-2d6d-11f1-80e7e58e8824]
+terraform_data.vm_ready["backend"]: Refreshing state... [id=00f80e82-1911-17e9-2e75-9703c0a93ec1]
+aws_route53_record.frontend: Refreshing state... [id=Z06027811LY2NMA384H5S_frontend.nirmala02.online_A]
+
+Note: Objects have changed outside of Terraform
+
+Terraform detected the following changes made outside of Terraform since the
+last "terraform apply" which may have affected this plan:
+
+  # aws_instance.backend has changed
+  ~ resource "aws_instance" "backend" {
+        id                                   = "i-09935cdd0d344f943"
+        tags                                 = {
+            "Name" = "expense-backend"
+            "Tier" = "backend"
+        }
+        # (41 unchanged attributes hidden)
+
+      ~ root_block_device {
+          + tags                  = {}
+            # (10 unchanged attributes hidden)
+        }
+
+        # (7 unchanged blocks hidden)
+    }
+
+  # aws_instance.frontend has changed
+  ~ resource "aws_instance" "frontend" {
+        id                                   = "i-0867f3c5db741c102"
+        tags                                 = {
+            "Name" = "expense-frontend"
+            "Tier" = "frontend"
+        }
+        # (41 unchanged attributes hidden)
+
+      ~ root_block_device {
+          + tags                  = {}
+            # (10 unchanged attributes hidden)
+        }
+
+        # (7 unchanged blocks hidden)
+    }
+
+
+Unless you have made equivalent changes to your configuration, or ignored the
+relevant attributes using ignore_changes, the following plan may include
+actions to undo or respond to these changes.
+
+─────────────────────────────────────────────────────────────────────────────
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+  ~ update in-place
+-/+ destroy and then create replacement
+
+Terraform will perform the following actions:
+
+  # aws_instance.mysql must be replaced
+-/+ resource "aws_instance" "mysql" {
+      ~ arn                                  = "arn:aws:ec2:ap-southeast-2:063487530809:instance/i-0b36d53fa43684cf9" -> (known after apply)
+      ~ associate_public_ip_address          = true -> (known after apply)
+      ~ availability_zone                    = "ap-southeast-2a" -> (known after apply)
+      ~ cpu_core_count                       = 1 -> (known after apply)
+      ~ cpu_threads_per_core                 = 2 -> (known after apply)
+      ~ disable_api_stop                     = false -> (known after apply)
+      ~ disable_api_termination              = false -> (known after apply)
+      ~ ebs_optimized                        = false -> (known after apply)
+      + enable_primary_ipv6                  = (known after apply)
+      - hibernation                          = false -> null
+      + host_id                              = (known after apply)
+      + host_resource_group_arn              = (known after apply)
+      + iam_instance_profile                 = (known after apply)
+      ~ id                                   = "i-0b36d53fa43684cf9" -> (known after apply)
+      ~ instance_initiated_shutdown_behavior = "stop" -> (known after apply)
+      + instance_lifecycle                   = (known after apply)
+      ~ instance_state                       = "running" -> (known after apply)
+      ~ ipv6_address_count                   = 0 -> (known after apply)
+      ~ ipv6_addresses                       = [] -> (known after apply)
+      + key_name                             = "devops-april" # forces replacement
+      ~ monitoring                           = false -> (known after apply)
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      ~ placement_partition_number           = 0 -> (known after apply)
+      ~ primary_network_interface_id         = "eni-0f737b11f36d425c8" -> (known after apply)
+      ~ private_dns                          = "ip-10-0-1-7.ap-southeast-2.compute.internal" -> (known after apply)
+      ~ private_ip                           = "10.0.1.7" -> (known after apply)
+      ~ public_dns                           = "ec2-13-239-38-91.ap-southeast-2.compute.amazonaws.com" -> (known after apply)
+      ~ public_ip                            = "13.239.38.91" -> (known after apply)
+      ~ secondary_private_ips                = [] -> (known after apply)
+      ~ security_groups                      = [] -> (known after apply)
+      + spot_instance_request_id             = (known after apply)
+        tags                                 = {
+            "Name" = "expense-mysql"
+            "Tier" = "mysql"
+        }
+      ~ tenancy                              = "default" -> (known after apply)
+      + user_data_base64                     = (known after apply)
+        # (10 unchanged attributes hidden)
+
+      ~ capacity_reservation_specification (known after apply)
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      ~ cpu_options (known after apply)
+      - cpu_options {
+          - core_count       = 1 -> null
+          - threads_per_core = 2 -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - credit_specification {
+          - cpu_credits = "unlimited" -> null
+        }
+
+      ~ ebs_block_device (known after apply)
+
+      ~ enclave_options (known after apply)
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      ~ ephemeral_block_device (known after apply)
+
+      ~ instance_market_options (known after apply)
+
+      ~ maintenance_options (known after apply)
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      ~ metadata_options (known after apply)
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_protocol_ipv6          = "disabled" -> null
+          - http_put_response_hop_limit = 1 -> null
+          - http_tokens                 = "optional" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      ~ network_interface (known after apply)
+
+      ~ private_dns_name_options (known after apply)
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      ~ root_block_device {
+          ~ device_name           = "/dev/sda1" -> (known after apply)
+          ~ encrypted             = false -> (known after apply)
+          ~ iops                  = 3000 -> (known after apply)
+          + kms_key_id            = (known after apply)
+          - tags                  = {} -> null
+          ~ tags_all              = {} -> (known after apply)
+          ~ throughput            = 125 -> (known after apply)
+          ~ volume_id             = "vol-07aeba6a3eeb8fbaf" -> (known after apply)
+            # (3 unchanged attributes hidden)
+        }
+    }
+
+  # aws_route53_record.mysql will be updated in-place
+  ~ resource "aws_route53_record" "mysql" {
+        id                               = "Z06027811LY2NMA384H5S_mysql.nirmala02.online_A"
+        name                             = "mysql.nirmala02.online"
+      ~ records                          = [
+          - "10.0.1.7",
+        ] -> (known after apply)
+        # (8 unchanged attributes hidden)
+    }
+
+  # terraform_data.app_ready will be created
+  + resource "terraform_data" "app_ready" {
+      + id               = (known after apply)
+      + triggers_replace = [
+          + "i-0867f3c5db741c102",
+          + "i-09935cdd0d344f943",
+          + (known after apply),
+          + "arn:aws:elasticloadbalancing:ap-southeast-2:063487530809:listener/app/expense-alb/a7e2e994e0b80e87/198d1eb0456396c1",
+          + "expense.nirmala02.online",
+        ]
+    }
+
+  # terraform_data.vm_ready["backend"] is tainted, so must be replaced
+-/+ resource "terraform_data" "vm_ready" {
+      ~ id               = "00f80e82-1911-17e9-2e75-9703c0a93ec1" -> (known after apply)
+        # (1 unchanged attribute hidden)
+    }
+
+Plan: 3 to add, 1 to change, 2 to destroy.
+
+─────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.

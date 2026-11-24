@@ -66,9 +66,10 @@ resource "aws_instance" "mysql" {
     volume_size = 20
   }
 
-  lifecycle {
+  /*lifecycle {
     prevent_destroy = true
   }
+  */
 
   tags        = { Name = "${var.project}-mysql", Tier = "mysql" }
   volume_tags = { Name = "${var.project}-mysql", Tier = "mysql", Project = var.project, Environment = "lab", ManagedBy = "terraform" }
