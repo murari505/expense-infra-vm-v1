@@ -138,3 +138,22 @@ resource "aws_instance" "frontend" {
 
   depends_on = [aws_route53_record.backend]
 }
+resource "aws_eip" "backend" {
+  domain   = "vpc"
+  instance = aws_instance.backend.id
+
+  tags = {
+    Name = "${var.project}-backend-eip"
+    Tier = "backend"
+  }
+}
+
+resource "aws_eip" "frontend" {
+  domain   = "vpc"
+  instance = aws_instance.frontend.id
+
+  tags = {
+    Name = "${var.project}-frontend-eip"
+    Tier = "frontend"
+  }
+}

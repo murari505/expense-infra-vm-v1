@@ -4,10 +4,11 @@ output "app_url" {
 }
 
 output "ssh_commands" {
-  description = "SSH into each VM (password: the ssh_password variable, DevOps321 by default)."
+  description = "SSH commands for each VM."
   value = {
-    for tier, inst in local.instances :
-    tier => "ssh ${var.ssh_user}@${inst.public_ip}"
+    frontend = "ssh ${var.ssh_user}@${aws_eip.frontend.public_ip}"
+    backend  = "ssh ${var.ssh_user}@${aws_eip.backend.public_ip}"
+    mysql    = "Connect through the backend using its private IP."
   }
 }
 
