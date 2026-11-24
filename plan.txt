@@ -1,53 +1,54 @@
-random_password.mysql_root: Refreshing state... [id=none]
-random_password.db_app: Refreshing state... [id=none]
-random_password.jwt_secret: Refreshing state... [id=none]
+Acquiring state lock. This may take a few moments...
 data.aws_availability_zones.available: Reading...
 data.aws_route53_zone.main: Reading...
 data.aws_ami.joindevops: Reading...
-aws_vpc.main: Refreshing state... [id=vpc-0ca8ec51d4f2e1e0b]
 aws_acm_certificate.app: Refreshing state... [id=arn:aws:acm:ap-southeast-2:063487530809:certificate/ed986206-f985-49c7-ade7-7a52bf280864]
+aws_vpc.main: Refreshing state... [id=vpc-0ca8ec51d4f2e1e0b]
+random_password.jwt_secret: Refreshing state... [id=none]
+random_password.db_app: Refreshing state... [id=none]
+random_password.mysql_root: Refreshing state... [id=none]
 data.aws_availability_zones.available: Read complete after 2s [id=ap-southeast-2]
-data.aws_ami.joindevops: Read complete after 3s [id=ami-06071c9809899e1e1]
 data.aws_route53_zone.main: Read complete after 3s [id=Z06027811LY2NMA384H5S]
 aws_route53_record.cert_validation["expense.nirmala02.online"]: Refreshing state... [id=Z06027811LY2NMA384H5S__ca5434cfd64f40abfa44b2ac6e7358c0.expense.nirmala02.online._CNAME]
+data.aws_ami.joindevops: Read complete after 3s [id=ami-06071c9809899e1e1]
 aws_acm_certificate_validation.app: Refreshing state... [id=0001-01-01 00:00:00 +0000 UTC]
 aws_internet_gateway.main: Refreshing state... [id=igw-08ab71a4835b186e4]
-aws_subnet.public["a"]: Refreshing state... [id=subnet-0ea859d6f5fd9dc8f]
 aws_lb_target_group.frontend: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-southeast-2:063487530809:targetgroup/expense-frontend-tg/ceb2f9dc8ca6b634]
 aws_subnet.public["b"]: Refreshing state... [id=subnet-0380e88e835954953]
+aws_subnet.public["a"]: Refreshing state... [id=subnet-0ea859d6f5fd9dc8f]
 aws_security_group.alb: Refreshing state... [id=sg-0b3639dfbd8324ad4]
-aws_security_group.mysql: Refreshing state... [id=sg-0757e625623134301]
 aws_security_group.frontend: Refreshing state... [id=sg-00b4eaf8141e964fb]
 aws_security_group.backend: Refreshing state... [id=sg-0211d8577c070eee5]
+aws_security_group.mysql: Refreshing state... [id=sg-0757e625623134301]
 aws_route_table.public: Refreshing state... [id=rtb-040222de6a4cf297e]
-aws_vpc_security_group_ingress_rule.alb_http: Refreshing state... [id=sgr-0189f34f5bb5e09a9]
 aws_vpc_security_group_ingress_rule.alb_https: Refreshing state... [id=sgr-089d38625f72f6716]
+aws_vpc_security_group_ingress_rule.alb_http: Refreshing state... [id=sgr-0189f34f5bb5e09a9]
 aws_lb.main: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-southeast-2:063487530809:loadbalancer/app/expense-alb/a7e2e994e0b80e87]
 aws_vpc_security_group_ingress_rule.frontend_from_alb: Refreshing state... [id=sgr-084df4b52f5e50ee4]
-aws_instance.mysql: Refreshing state... [id=i-0b36d53fa43684cf9]
-aws_route_table_association.public["a"]: Refreshing state... [id=rtbassoc-013d9ebf534b97a21]
-aws_route_table_association.public["b"]: Refreshing state... [id=rtbassoc-0c1e7fa282a987d15]
+aws_instance.mysql: Refreshing state... [id=i-0215c4516d8645b0e]
 aws_vpc_security_group_ingress_rule.backend_from_frontend: Refreshing state... [id=sgr-07be66536bbe3ca7e]
 aws_vpc_security_group_ingress_rule.mysql_from_backend: Refreshing state... [id=sgr-099432b9694126a66]
+aws_vpc_security_group_egress_rule.all["frontend"]: Refreshing state... [id=sgr-0d7a2cfe886d1a47a]
+aws_vpc_security_group_egress_rule.all["mysql"]: Refreshing state... [id=sgr-0b2ad7646be5ade4e]
+aws_vpc_security_group_egress_rule.all["backend"]: Refreshing state... [id=sgr-05027b63c543e00e3]
 aws_vpc_security_group_ingress_rule.ssh["mysql"]: Refreshing state... [id=sgr-07b308d75d9049e6e]
 aws_vpc_security_group_ingress_rule.ssh["backend"]: Refreshing state... [id=sgr-0d9c156088ebe27b2]
 aws_vpc_security_group_ingress_rule.ssh["frontend"]: Refreshing state... [id=sgr-044192c8e7e76b44f]
-aws_vpc_security_group_egress_rule.all["mysql"]: Refreshing state... [id=sgr-0b2ad7646be5ade4e]
-aws_vpc_security_group_ingress_rule.monitoring["frontend-nginx_exporter-106.216.203.146/32"]: Refreshing state... [id=sgr-079cd9dbd42361a07]
-aws_vpc_security_group_ingress_rule.monitoring["backend-node_exporter-106.216.203.146/32"]: Refreshing state... [id=sgr-0adc1024c55e27874]
-aws_vpc_security_group_ingress_rule.monitoring["mysql-mysqld_exporter-10.0.0.0/16"]: Refreshing state... [id=sgr-02eacdb12dccb4c81]
-aws_vpc_security_group_ingress_rule.monitoring["mysql-node_exporter-106.216.203.146/32"]: Refreshing state... [id=sgr-0cf7675ccae00eab1]
-aws_vpc_security_group_ingress_rule.monitoring["mysql-node_exporter-10.0.0.0/16"]: Refreshing state... [id=sgr-0f836949ff717f75f]
-aws_vpc_security_group_ingress_rule.monitoring["backend-node_exporter-10.0.0.0/16"]: Refreshing state... [id=sgr-0c450bdfe5f3b5a9c]
-aws_vpc_security_group_ingress_rule.monitoring["frontend-node_exporter-106.216.203.146/32"]: Refreshing state... [id=sgr-0fa6b6f63edad07b8]
-aws_vpc_security_group_ingress_rule.monitoring["mysql-mysqld_exporter-106.216.203.146/32"]: Refreshing state... [id=sgr-094b98256ca023f12]
-aws_vpc_security_group_ingress_rule.monitoring["backend-backend_metrics-106.216.203.146/32"]: Refreshing state... [id=sgr-0f4d529912d7c5778]
-aws_vpc_security_group_ingress_rule.monitoring["frontend-node_exporter-10.0.0.0/16"]: Refreshing state... [id=sgr-0933123edbfe79769]
 aws_vpc_security_group_ingress_rule.monitoring["backend-backend_metrics-10.0.0.0/16"]: Refreshing state... [id=sgr-0777eae81ecd3073b]
-aws_vpc_security_group_ingress_rule.monitoring["frontend-nginx_exporter-10.0.0.0/16"]: Refreshing state... [id=sgr-06a0a15ec5f78c837]
 aws_vpc_security_group_egress_rule.all["alb"]: Refreshing state... [id=sgr-01eacae74755420e9]
-aws_vpc_security_group_egress_rule.all["backend"]: Refreshing state... [id=sgr-05027b63c543e00e3]
-aws_vpc_security_group_egress_rule.all["frontend"]: Refreshing state... [id=sgr-0d7a2cfe886d1a47a]
+aws_vpc_security_group_ingress_rule.monitoring["backend-node_exporter-10.0.0.0/16"]: Refreshing state... [id=sgr-0c450bdfe5f3b5a9c]
+aws_vpc_security_group_ingress_rule.monitoring["mysql-node_exporter-10.0.0.0/16"]: Refreshing state... [id=sgr-0f836949ff717f75f]
+aws_vpc_security_group_ingress_rule.monitoring["mysql-mysqld_exporter-10.0.0.0/16"]: Refreshing state... [id=sgr-02eacdb12dccb4c81]
+aws_vpc_security_group_ingress_rule.monitoring["frontend-nginx_exporter-10.0.0.0/16"]: Refreshing state... [id=sgr-06a0a15ec5f78c837]
+aws_vpc_security_group_ingress_rule.monitoring["mysql-mysqld_exporter-106.192.32.45/32"]: Refreshing state... [id=sgr-07b92ed8f560e1067]
+aws_vpc_security_group_ingress_rule.monitoring["backend-node_exporter-106.192.32.45/32"]: Refreshing state... [id=sgr-03649666ef85ae8bf]
+aws_vpc_security_group_ingress_rule.monitoring["backend-backend_metrics-106.192.32.45/32"]: Refreshing state... [id=sgr-0e6548fe024d2eb80]
+aws_vpc_security_group_ingress_rule.monitoring["frontend-nginx_exporter-106.192.32.45/32"]: Refreshing state... [id=sgr-0d29b1648811a245b]
+aws_vpc_security_group_ingress_rule.monitoring["mysql-node_exporter-106.192.32.45/32"]: Refreshing state... [id=sgr-0a598d4d95baa212b]
+aws_vpc_security_group_ingress_rule.monitoring["frontend-node_exporter-10.0.0.0/16"]: Refreshing state... [id=sgr-0933123edbfe79769]
+aws_vpc_security_group_ingress_rule.monitoring["frontend-node_exporter-106.192.32.45/32"]: Refreshing state... [id=sgr-0510f9a91967a7783]
+aws_route_table_association.public["a"]: Refreshing state... [id=rtbassoc-013d9ebf534b97a21]
+aws_route_table_association.public["b"]: Refreshing state... [id=rtbassoc-0c1e7fa282a987d15]
 aws_route53_record.app: Refreshing state... [id=Z06027811LY2NMA384H5S_expense.nirmala02.online_A]
 aws_lb_listener.http: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-southeast-2:063487530809:listener/app/expense-alb/a7e2e994e0b80e87/68cbf04f59a7f023]
 aws_lb_listener.https: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-southeast-2:063487530809:listener/app/expense-alb/a7e2e994e0b80e87/198d1eb0456396c1]
@@ -56,9 +57,10 @@ aws_instance.backend: Refreshing state... [id=i-09935cdd0d344f943]
 aws_route53_record.backend: Refreshing state... [id=Z06027811LY2NMA384H5S_backend.nirmala02.online_A]
 aws_instance.frontend: Refreshing state... [id=i-0867f3c5db741c102]
 aws_lb_target_group_attachment.frontend: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-southeast-2:063487530809:targetgroup/expense-frontend-tg/ceb2f9dc8ca6b634-20261123144249864500000004]
-terraform_data.vm_ready["frontend"]: Refreshing state... [id=41ddb425-d40a-2d6d-11f1-80e7e58e8824]
-terraform_data.vm_ready["backend"]: Refreshing state... [id=00f80e82-1911-17e9-2e75-9703c0a93ec1]
 aws_route53_record.frontend: Refreshing state... [id=Z06027811LY2NMA384H5S_frontend.nirmala02.online_A]
+terraform_data.vm_ready["frontend"]: Refreshing state... [id=41ddb425-d40a-2d6d-11f1-80e7e58e8824]
+terraform_data.vm_ready["mysql"]: Refreshing state... [id=c26d2680-3209-a6fe-7e5c-67cbb1b41385]
+terraform_data.vm_ready["backend"]: Refreshing state... [id=138ca239-4b46-5d84-fce5-b35f60d2e148]
 
 Note: Objects have changed outside of Terraform
 
@@ -68,35 +70,43 @@ last "terraform apply" which may have affected this plan:
   # aws_instance.backend has changed
   ~ resource "aws_instance" "backend" {
         id                                   = "i-09935cdd0d344f943"
+      ~ public_dns                           = "ec2-3-107-243-25.ap-southeast-2.compute.amazonaws.com" -> "ec2-13-239-251-207.ap-southeast-2.compute.amazonaws.com"
+      ~ public_ip                            = "3.107.243.25" -> "13.239.251.207"
         tags                                 = {
             "Name" = "expense-backend"
             "Tier" = "backend"
         }
-        # (41 unchanged attributes hidden)
+        # (39 unchanged attributes hidden)
 
-      ~ root_block_device {
-          + tags                  = {}
-            # (10 unchanged attributes hidden)
-        }
-
-        # (7 unchanged blocks hidden)
+        # (8 unchanged blocks hidden)
     }
 
   # aws_instance.frontend has changed
   ~ resource "aws_instance" "frontend" {
         id                                   = "i-0867f3c5db741c102"
+      ~ public_dns                           = "ec2-13-55-255-111.ap-southeast-2.compute.amazonaws.com" -> "ec2-54-252-162-208.ap-southeast-2.compute.amazonaws.com"
+      ~ public_ip                            = "13.55.255.111" -> "54.252.162.208"
         tags                                 = {
             "Name" = "expense-frontend"
             "Tier" = "frontend"
         }
-        # (41 unchanged attributes hidden)
+        # (39 unchanged attributes hidden)
 
-      ~ root_block_device {
-          + tags                  = {}
-            # (10 unchanged attributes hidden)
+        # (8 unchanged blocks hidden)
+    }
+
+  # aws_instance.mysql has changed
+  ~ resource "aws_instance" "mysql" {
+        id                                   = "i-0215c4516d8645b0e"
+      ~ public_dns                           = "ec2-54-79-109-202.ap-southeast-2.compute.amazonaws.com" -> "ec2-13-211-153-68.ap-southeast-2.compute.amazonaws.com"
+      ~ public_ip                            = "54.79.109.202" -> "13.211.153.68"
+        tags                                 = {
+            "Name" = "expense-mysql"
+            "Tier" = "mysql"
         }
+        # (39 unchanged attributes hidden)
 
-        # (7 unchanged blocks hidden)
+        # (8 unchanged blocks hidden)
     }
 
 
@@ -110,123 +120,317 @@ Terraform used the selected providers to generate the following execution
 plan. Resource actions are indicated with the following symbols:
   + create
   ~ update in-place
+  - destroy
 -/+ destroy and then create replacement
 
 Terraform will perform the following actions:
 
-  # aws_instance.mysql must be replaced
--/+ resource "aws_instance" "mysql" {
-      ~ arn                                  = "arn:aws:ec2:ap-southeast-2:063487530809:instance/i-0b36d53fa43684cf9" -> (known after apply)
-      ~ associate_public_ip_address          = true -> (known after apply)
-      ~ availability_zone                    = "ap-southeast-2a" -> (known after apply)
-      ~ cpu_core_count                       = 1 -> (known after apply)
-      ~ cpu_threads_per_core                 = 2 -> (known after apply)
-      ~ disable_api_stop                     = false -> (known after apply)
-      ~ disable_api_termination              = false -> (known after apply)
-      ~ ebs_optimized                        = false -> (known after apply)
-      + enable_primary_ipv6                  = (known after apply)
-      - hibernation                          = false -> null
-      + host_id                              = (known after apply)
-      + host_resource_group_arn              = (known after apply)
-      + iam_instance_profile                 = (known after apply)
-      ~ id                                   = "i-0b36d53fa43684cf9" -> (known after apply)
-      ~ instance_initiated_shutdown_behavior = "stop" -> (known after apply)
-      + instance_lifecycle                   = (known after apply)
-      ~ instance_state                       = "running" -> (known after apply)
-      ~ ipv6_address_count                   = 0 -> (known after apply)
-      ~ ipv6_addresses                       = [] -> (known after apply)
-      + key_name                             = "devops-april" # forces replacement
-      ~ monitoring                           = false -> (known after apply)
-      + outpost_arn                          = (known after apply)
-      + password_data                        = (known after apply)
-      + placement_group                      = (known after apply)
-      ~ placement_partition_number           = 0 -> (known after apply)
-      ~ primary_network_interface_id         = "eni-0f737b11f36d425c8" -> (known after apply)
-      ~ private_dns                          = "ip-10-0-1-7.ap-southeast-2.compute.internal" -> (known after apply)
-      ~ private_ip                           = "10.0.1.7" -> (known after apply)
-      ~ public_dns                           = "ec2-13-239-38-91.ap-southeast-2.compute.amazonaws.com" -> (known after apply)
-      ~ public_ip                            = "13.239.38.91" -> (known after apply)
-      ~ secondary_private_ips                = [] -> (known after apply)
-      ~ security_groups                      = [] -> (known after apply)
-      + spot_instance_request_id             = (known after apply)
-        tags                                 = {
-            "Name" = "expense-mysql"
-            "Tier" = "mysql"
+  # aws_eip.backend will be created
+  + resource "aws_eip" "backend" {
+      + allocation_id        = (known after apply)
+      + arn                  = (known after apply)
+      + association_id       = (known after apply)
+      + carrier_ip           = (known after apply)
+      + customer_owned_ip    = (known after apply)
+      + domain               = "vpc"
+      + id                   = (known after apply)
+      + instance             = "i-09935cdd0d344f943"
+      + ipam_pool_id         = (known after apply)
+      + network_border_group = (known after apply)
+      + network_interface    = (known after apply)
+      + private_dns          = (known after apply)
+      + private_ip           = (known after apply)
+      + ptr_record           = (known after apply)
+      + public_dns           = (known after apply)
+      + public_ip            = (known after apply)
+      + public_ipv4_pool     = (known after apply)
+      + tags                 = {
+          + "Name" = "expense-backend-eip"
+          + "Tier" = "backend"
         }
-      ~ tenancy                              = "default" -> (known after apply)
-      + user_data_base64                     = (known after apply)
-        # (10 unchanged attributes hidden)
-
-      ~ capacity_reservation_specification (known after apply)
-      - capacity_reservation_specification {
-          - capacity_reservation_preference = "open" -> null
+      + tags_all             = {
+          + "Environment" = "lab"
+          + "ManagedBy"   = "terraform"
+          + "Name"        = "expense-backend-eip"
+          + "Project"     = "expense"
+          + "Tier"        = "backend"
         }
-
-      ~ cpu_options (known after apply)
-      - cpu_options {
-          - core_count       = 1 -> null
-          - threads_per_core = 2 -> null
-            # (1 unchanged attribute hidden)
-        }
-
-      - credit_specification {
-          - cpu_credits = "unlimited" -> null
-        }
-
-      ~ ebs_block_device (known after apply)
-
-      ~ enclave_options (known after apply)
-      - enclave_options {
-          - enabled = false -> null
-        }
-
-      ~ ephemeral_block_device (known after apply)
-
-      ~ instance_market_options (known after apply)
-
-      ~ maintenance_options (known after apply)
-      - maintenance_options {
-          - auto_recovery = "default" -> null
-        }
-
-      ~ metadata_options (known after apply)
-      - metadata_options {
-          - http_endpoint               = "enabled" -> null
-          - http_protocol_ipv6          = "disabled" -> null
-          - http_put_response_hop_limit = 1 -> null
-          - http_tokens                 = "optional" -> null
-          - instance_metadata_tags      = "disabled" -> null
-        }
-
-      ~ network_interface (known after apply)
-
-      ~ private_dns_name_options (known after apply)
-      - private_dns_name_options {
-          - enable_resource_name_dns_a_record    = false -> null
-          - enable_resource_name_dns_aaaa_record = false -> null
-          - hostname_type                        = "ip-name" -> null
-        }
-
-      ~ root_block_device {
-          ~ device_name           = "/dev/sda1" -> (known after apply)
-          ~ encrypted             = false -> (known after apply)
-          ~ iops                  = 3000 -> (known after apply)
-          + kms_key_id            = (known after apply)
-          - tags                  = {} -> null
-          ~ tags_all              = {} -> (known after apply)
-          ~ throughput            = 125 -> (known after apply)
-          ~ volume_id             = "vol-07aeba6a3eeb8fbaf" -> (known after apply)
-            # (3 unchanged attributes hidden)
-        }
+      + vpc                  = (known after apply)
     }
 
-  # aws_route53_record.mysql will be updated in-place
-  ~ resource "aws_route53_record" "mysql" {
-        id                               = "Z06027811LY2NMA384H5S_mysql.nirmala02.online_A"
-        name                             = "mysql.nirmala02.online"
-      ~ records                          = [
-          - "10.0.1.7",
-        ] -> (known after apply)
+  # aws_eip.frontend will be created
+  + resource "aws_eip" "frontend" {
+      + allocation_id        = (known after apply)
+      + arn                  = (known after apply)
+      + association_id       = (known after apply)
+      + carrier_ip           = (known after apply)
+      + customer_owned_ip    = (known after apply)
+      + domain               = "vpc"
+      + id                   = (known after apply)
+      + instance             = "i-0867f3c5db741c102"
+      + ipam_pool_id         = (known after apply)
+      + network_border_group = (known after apply)
+      + network_interface    = (known after apply)
+      + private_dns          = (known after apply)
+      + private_ip           = (known after apply)
+      + ptr_record           = (known after apply)
+      + public_dns           = (known after apply)
+      + public_ip            = (known after apply)
+      + public_ipv4_pool     = (known after apply)
+      + tags                 = {
+          + "Name" = "expense-frontend-eip"
+          + "Tier" = "frontend"
+        }
+      + tags_all             = {
+          + "Environment" = "lab"
+          + "ManagedBy"   = "terraform"
+          + "Name"        = "expense-frontend-eip"
+          + "Project"     = "expense"
+          + "Tier"        = "frontend"
+        }
+      + vpc                  = (known after apply)
+    }
+
+  # aws_vpc_security_group_ingress_rule.monitoring["backend-backend_metrics-106.192.32.45/32"] will be destroyed
+  # (because key ["backend-backend_metrics-106.192.32.45/32"] is not in for_each map)
+  - resource "aws_vpc_security_group_ingress_rule" "monitoring" {
+      - arn                    = "arn:aws:ec2:ap-southeast-2:063487530809:security-group-rule/sgr-0e6548fe024d2eb80" -> null
+      - cidr_ipv4              = "106.192.32.45/32" -> null
+      - description            = "backend_metrics from 106.192.32.45/32" -> null
+      - from_port              = 9101 -> null
+      - id                     = "sgr-0e6548fe024d2eb80" -> null
+      - ip_protocol            = "tcp" -> null
+      - security_group_id      = "sg-0211d8577c070eee5" -> null
+      - security_group_rule_id = "sgr-0e6548fe024d2eb80" -> null
+      - tags_all               = {
+          - "Environment" = "lab"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "expense"
+        } -> null
+      - to_port                = 9101 -> null
+    }
+
+  # aws_vpc_security_group_ingress_rule.monitoring["backend-backend_metrics-106.192.35.183/32"] will be created
+  + resource "aws_vpc_security_group_ingress_rule" "monitoring" {
+      + arn                    = (known after apply)
+      + cidr_ipv4              = "106.192.35.183/32"
+      + description            = "backend_metrics from 106.192.35.183/32"
+      + from_port              = 9101
+      + id                     = (known after apply)
+      + ip_protocol            = "tcp"
+      + security_group_id      = "sg-0211d8577c070eee5"
+      + security_group_rule_id = (known after apply)
+      + tags_all               = {
+          + "Environment" = "lab"
+          + "ManagedBy"   = "terraform"
+          + "Project"     = "expense"
+        }
+      + to_port                = 9101
+    }
+
+  # aws_vpc_security_group_ingress_rule.monitoring["backend-node_exporter-106.192.32.45/32"] will be destroyed
+  # (because key ["backend-node_exporter-106.192.32.45/32"] is not in for_each map)
+  - resource "aws_vpc_security_group_ingress_rule" "monitoring" {
+      - arn                    = "arn:aws:ec2:ap-southeast-2:063487530809:security-group-rule/sgr-03649666ef85ae8bf" -> null
+      - cidr_ipv4              = "106.192.32.45/32" -> null
+      - description            = "node_exporter from 106.192.32.45/32" -> null
+      - from_port              = 9100 -> null
+      - id                     = "sgr-03649666ef85ae8bf" -> null
+      - ip_protocol            = "tcp" -> null
+      - security_group_id      = "sg-0211d8577c070eee5" -> null
+      - security_group_rule_id = "sgr-03649666ef85ae8bf" -> null
+      - tags_all               = {
+          - "Environment" = "lab"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "expense"
+        } -> null
+      - to_port                = 9100 -> null
+    }
+
+  # aws_vpc_security_group_ingress_rule.monitoring["backend-node_exporter-106.192.35.183/32"] will be created
+  + resource "aws_vpc_security_group_ingress_rule" "monitoring" {
+      + arn                    = (known after apply)
+      + cidr_ipv4              = "106.192.35.183/32"
+      + description            = "node_exporter from 106.192.35.183/32"
+      + from_port              = 9100
+      + id                     = (known after apply)
+      + ip_protocol            = "tcp"
+      + security_group_id      = "sg-0211d8577c070eee5"
+      + security_group_rule_id = (known after apply)
+      + tags_all               = {
+          + "Environment" = "lab"
+          + "ManagedBy"   = "terraform"
+          + "Project"     = "expense"
+        }
+      + to_port                = 9100
+    }
+
+  # aws_vpc_security_group_ingress_rule.monitoring["frontend-nginx_exporter-106.192.32.45/32"] will be destroyed
+  # (because key ["frontend-nginx_exporter-106.192.32.45/32"] is not in for_each map)
+  - resource "aws_vpc_security_group_ingress_rule" "monitoring" {
+      - arn                    = "arn:aws:ec2:ap-southeast-2:063487530809:security-group-rule/sgr-0d29b1648811a245b" -> null
+      - cidr_ipv4              = "106.192.32.45/32" -> null
+      - description            = "nginx_exporter from 106.192.32.45/32" -> null
+      - from_port              = 9113 -> null
+      - id                     = "sgr-0d29b1648811a245b" -> null
+      - ip_protocol            = "tcp" -> null
+      - security_group_id      = "sg-00b4eaf8141e964fb" -> null
+      - security_group_rule_id = "sgr-0d29b1648811a245b" -> null
+      - tags_all               = {
+          - "Environment" = "lab"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "expense"
+        } -> null
+      - to_port                = 9113 -> null
+    }
+
+  # aws_vpc_security_group_ingress_rule.monitoring["frontend-nginx_exporter-106.192.35.183/32"] will be created
+  + resource "aws_vpc_security_group_ingress_rule" "monitoring" {
+      + arn                    = (known after apply)
+      + cidr_ipv4              = "106.192.35.183/32"
+      + description            = "nginx_exporter from 106.192.35.183/32"
+      + from_port              = 9113
+      + id                     = (known after apply)
+      + ip_protocol            = "tcp"
+      + security_group_id      = "sg-00b4eaf8141e964fb"
+      + security_group_rule_id = (known after apply)
+      + tags_all               = {
+          + "Environment" = "lab"
+          + "ManagedBy"   = "terraform"
+          + "Project"     = "expense"
+        }
+      + to_port                = 9113
+    }
+
+  # aws_vpc_security_group_ingress_rule.monitoring["frontend-node_exporter-106.192.32.45/32"] will be destroyed
+  # (because key ["frontend-node_exporter-106.192.32.45/32"] is not in for_each map)
+  - resource "aws_vpc_security_group_ingress_rule" "monitoring" {
+      - arn                    = "arn:aws:ec2:ap-southeast-2:063487530809:security-group-rule/sgr-0510f9a91967a7783" -> null
+      - cidr_ipv4              = "106.192.32.45/32" -> null
+      - description            = "node_exporter from 106.192.32.45/32" -> null
+      - from_port              = 9100 -> null
+      - id                     = "sgr-0510f9a91967a7783" -> null
+      - ip_protocol            = "tcp" -> null
+      - security_group_id      = "sg-00b4eaf8141e964fb" -> null
+      - security_group_rule_id = "sgr-0510f9a91967a7783" -> null
+      - tags_all               = {
+          - "Environment" = "lab"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "expense"
+        } -> null
+      - to_port                = 9100 -> null
+    }
+
+  # aws_vpc_security_group_ingress_rule.monitoring["frontend-node_exporter-106.192.35.183/32"] will be created
+  + resource "aws_vpc_security_group_ingress_rule" "monitoring" {
+      + arn                    = (known after apply)
+      + cidr_ipv4              = "106.192.35.183/32"
+      + description            = "node_exporter from 106.192.35.183/32"
+      + from_port              = 9100
+      + id                     = (known after apply)
+      + ip_protocol            = "tcp"
+      + security_group_id      = "sg-00b4eaf8141e964fb"
+      + security_group_rule_id = (known after apply)
+      + tags_all               = {
+          + "Environment" = "lab"
+          + "ManagedBy"   = "terraform"
+          + "Project"     = "expense"
+        }
+      + to_port                = 9100
+    }
+
+  # aws_vpc_security_group_ingress_rule.monitoring["mysql-mysqld_exporter-106.192.32.45/32"] will be destroyed
+  # (because key ["mysql-mysqld_exporter-106.192.32.45/32"] is not in for_each map)
+  - resource "aws_vpc_security_group_ingress_rule" "monitoring" {
+      - arn                    = "arn:aws:ec2:ap-southeast-2:063487530809:security-group-rule/sgr-07b92ed8f560e1067" -> null
+      - cidr_ipv4              = "106.192.32.45/32" -> null
+      - description            = "mysqld_exporter from 106.192.32.45/32" -> null
+      - from_port              = 9104 -> null
+      - id                     = "sgr-07b92ed8f560e1067" -> null
+      - ip_protocol            = "tcp" -> null
+      - security_group_id      = "sg-0757e625623134301" -> null
+      - security_group_rule_id = "sgr-07b92ed8f560e1067" -> null
+      - tags_all               = {
+          - "Environment" = "lab"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "expense"
+        } -> null
+      - to_port                = 9104 -> null
+    }
+
+  # aws_vpc_security_group_ingress_rule.monitoring["mysql-mysqld_exporter-106.192.35.183/32"] will be created
+  + resource "aws_vpc_security_group_ingress_rule" "monitoring" {
+      + arn                    = (known after apply)
+      + cidr_ipv4              = "106.192.35.183/32"
+      + description            = "mysqld_exporter from 106.192.35.183/32"
+      + from_port              = 9104
+      + id                     = (known after apply)
+      + ip_protocol            = "tcp"
+      + security_group_id      = "sg-0757e625623134301"
+      + security_group_rule_id = (known after apply)
+      + tags_all               = {
+          + "Environment" = "lab"
+          + "ManagedBy"   = "terraform"
+          + "Project"     = "expense"
+        }
+      + to_port                = 9104
+    }
+
+  # aws_vpc_security_group_ingress_rule.monitoring["mysql-node_exporter-106.192.32.45/32"] will be destroyed
+  # (because key ["mysql-node_exporter-106.192.32.45/32"] is not in for_each map)
+  - resource "aws_vpc_security_group_ingress_rule" "monitoring" {
+      - arn                    = "arn:aws:ec2:ap-southeast-2:063487530809:security-group-rule/sgr-0a598d4d95baa212b" -> null
+      - cidr_ipv4              = "106.192.32.45/32" -> null
+      - description            = "node_exporter from 106.192.32.45/32" -> null
+      - from_port              = 9100 -> null
+      - id                     = "sgr-0a598d4d95baa212b" -> null
+      - ip_protocol            = "tcp" -> null
+      - security_group_id      = "sg-0757e625623134301" -> null
+      - security_group_rule_id = "sgr-0a598d4d95baa212b" -> null
+      - tags_all               = {
+          - "Environment" = "lab"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "expense"
+        } -> null
+      - to_port                = 9100 -> null
+    }
+
+  # aws_vpc_security_group_ingress_rule.monitoring["mysql-node_exporter-106.192.35.183/32"] will be created
+  + resource "aws_vpc_security_group_ingress_rule" "monitoring" {
+      + arn                    = (known after apply)
+      + cidr_ipv4              = "106.192.35.183/32"
+      + description            = "node_exporter from 106.192.35.183/32"
+      + from_port              = 9100
+      + id                     = (known after apply)
+      + ip_protocol            = "tcp"
+      + security_group_id      = "sg-0757e625623134301"
+      + security_group_rule_id = (known after apply)
+      + tags_all               = {
+          + "Environment" = "lab"
+          + "ManagedBy"   = "terraform"
+          + "Project"     = "expense"
+        }
+      + to_port                = 9100
+    }
+
+  # aws_vpc_security_group_ingress_rule.ssh["backend"] will be updated in-place
+  ~ resource "aws_vpc_security_group_ingress_rule" "ssh" {
+      ~ cidr_ipv4              = "106.200.161.146/32" -> "106.192.35.183/32"
+        id                     = "sgr-0d9c156088ebe27b2"
+        # (8 unchanged attributes hidden)
+    }
+
+  # aws_vpc_security_group_ingress_rule.ssh["frontend"] will be updated in-place
+  ~ resource "aws_vpc_security_group_ingress_rule" "ssh" {
+      ~ cidr_ipv4              = "106.200.161.146/32" -> "106.192.35.183/32"
+        id                     = "sgr-044192c8e7e76b44f"
+        # (8 unchanged attributes hidden)
+    }
+
+  # aws_vpc_security_group_ingress_rule.ssh["mysql"] will be updated in-place
+  ~ resource "aws_vpc_security_group_ingress_rule" "ssh" {
+      ~ cidr_ipv4              = "106.200.161.146/32" -> "106.192.35.183/32"
+        id                     = "sgr-07b308d75d9049e6e"
         # (8 unchanged attributes hidden)
     }
 
@@ -236,7 +440,7 @@ Terraform will perform the following actions:
       + triggers_replace = [
           + "i-0867f3c5db741c102",
           + "i-09935cdd0d344f943",
-          + (known after apply),
+          + "i-0215c4516d8645b0e",
           + "arn:aws:elasticloadbalancing:ap-southeast-2:063487530809:listener/app/expense-alb/a7e2e994e0b80e87/198d1eb0456396c1",
           + "expense.nirmala02.online",
         ]
@@ -244,11 +448,24 @@ Terraform will perform the following actions:
 
   # terraform_data.vm_ready["backend"] is tainted, so must be replaced
 -/+ resource "terraform_data" "vm_ready" {
-      ~ id               = "00f80e82-1911-17e9-2e75-9703c0a93ec1" -> (known after apply)
+      ~ id               = "138ca239-4b46-5d84-fce5-b35f60d2e148" -> (known after apply)
         # (1 unchanged attribute hidden)
     }
 
-Plan: 3 to add, 1 to change, 2 to destroy.
+  # terraform_data.vm_ready["mysql"] is tainted, so must be replaced
+-/+ resource "terraform_data" "vm_ready" {
+      ~ id               = "c26d2680-3209-a6fe-7e5c-67cbb1b41385" -> (known after apply)
+        # (1 unchanged attribute hidden)
+    }
+
+Plan: 11 to add, 3 to change, 8 to destroy.
+
+Changes to Outputs:
+  ~ ssh_commands        = {
+      ~ backend  = "ssh ec2-user@3.107.243.25" -> (known after apply)
+      ~ frontend = "ssh ec2-user@13.55.255.111" -> (known after apply)
+      ~ mysql    = "ssh ec2-user@54.79.109.202" -> "Connect through the backend using its private IP."
+    }
 
 ─────────────────────────────────────────────────────────────────────────────
 
